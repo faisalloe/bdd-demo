@@ -1,16 +1,17 @@
 package net.xeric.demos.steps;
 
 
+import static org.junit.Assert.assertEquals;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.web.WebAppConfiguration;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.xeric.demos.CucumberConfiguration;
 import net.xeric.demos.pages.DemoPage;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.web.WebAppConfiguration;
-
-import static org.junit.Assert.assertEquals;
 
 
 /**
@@ -50,4 +51,16 @@ public class DemoSteps {
     public void the_count_increases() throws Throwable {
         assertEquals(count + 1, demoPage.getCount());
     }
+    
+    @When("^I pass number (-?\\d+)$")
+    public void convert_numbers_to_roman(int arg1) throws Throwable {
+       demoPage.toRoman(arg1);
+    }
+
+    @Then("^the result is (-?\\d+)$")
+    public void the_roman_result_is(int arg1) throws Throwable {
+        assertEquals(arg1, demoPage.getRomanResults());
+    }
+    
+    
 }

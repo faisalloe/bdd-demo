@@ -31,7 +31,6 @@ public class DemoPage {
         driver.findElement(By.id("adder-second-number")).sendKeys(Integer.toString(y));
         driver.findElement(By.id("adder-button")).click();
     }
-
     public int getAdderResults() {
         return Integer.parseInt(driver.findElement(By.id("adder-result")).getText());
     }
@@ -43,4 +42,15 @@ public class DemoPage {
     public void clickIncrement() {
         driver.findElement(By.id("increment-button")).click();
     }
+    
+    
+    public void toRoman(int x){
+    	driver.findElement(By.id("to-roman-number")).sendKeys(Integer.toString(x));
+    	driver.findElement(By.id("roman-button")).click();
+    }
+    
+    public int getRomanResults() {
+        return Integer.parseInt(driver.findElement(By.id("roman-result")).getText());
+    }
+    
 }

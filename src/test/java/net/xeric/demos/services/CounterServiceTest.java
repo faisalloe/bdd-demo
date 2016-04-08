@@ -1,8 +1,8 @@
 package net.xeric.demos.services;
 
-import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
 
 /**
  * Created by markshead on 4/2/16.

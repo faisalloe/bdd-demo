@@ -20,3 +20,14 @@ myApp.controller("additionController", function($http, $scope) {
 
 
 });
+
+
+myApp.controller("romanNumberController", function($http, $scope) {
+    $scope.toRomanNumber =  function() {
+        $http.get('/romanNumber',{params:{num: $scope.romanNumber}}).success(function(data){
+            $scope.romanNumberResult = data;
+        });
+    }
+
+
+});

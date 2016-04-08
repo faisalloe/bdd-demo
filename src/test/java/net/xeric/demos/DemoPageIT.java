@@ -1,7 +1,7 @@
 package net.xeric.demos;
 
-import net.xeric.demos.DemoApplication;
-import net.xeric.demos.pages.DemoPage;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
-import static org.junit.Assert.assertEquals;
+import net.xeric.demos.pages.DemoPage;
 
 /**
  * Created by markshead on 4/2/16.
