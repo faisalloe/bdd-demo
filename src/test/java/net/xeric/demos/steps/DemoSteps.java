@@ -57,7 +57,7 @@ public class DemoSteps {
        demoPage.toRoman(arg1);
     }
 
-    @Then("^the result is (-?\\d+)$")
+    @Then("^the roman result is (-?\\d+)$")
     public void the_roman_result_is(int arg1) throws Throwable {
         assertEquals(arg1, demoPage.getRomanResults());
     }
