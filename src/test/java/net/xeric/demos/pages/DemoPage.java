@@ -49,8 +49,8 @@ public class DemoPage {
     	driver.findElement(By.id("roman-button")).click();
     }
     
-    public int getRomanResults() {
-        return Integer.parseInt(driver.findElement(By.id("roman-result")).getText());
+    public String getRomanResults() {
+        return driver.findElement(By.id("roman-result")).getText();
     }
     
 }

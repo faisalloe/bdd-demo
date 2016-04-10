@@ -14,8 +14,6 @@ public class RomanServiceTest {
     @Test
     public void testRoman() throws Exception {
     	
-    	romanService.loadRomanData();
-    	
         assertEquals("I", romanService.toRoman(1));
         assertEquals("V", romanService.toRoman(5));
     }

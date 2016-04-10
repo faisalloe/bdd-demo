@@ -2,6 +2,7 @@ package net.xeric.demos.controllers;
 
 import static org.junit.Assert.assertEquals;
 
+import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,11 +30,15 @@ public class RomanControllerIT {
     RomanNumberController romanNumberController;
 
     @Test
-    public void testAdder() throws Exception {
+    public void testRoman() throws Exception {
     	
     	RomanEntry entry = romanNumberController.toRomanNum(5);
-    	 
     	assertEquals(entry.getVal(), "V");
     	
+    	entry = romanNumberController.toRomanNum(1);
+    	assertFalse("III".equals(entry.getVal()));
+    	
     }
+    
+    
 }

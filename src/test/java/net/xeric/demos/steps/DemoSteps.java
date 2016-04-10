@@ -52,14 +52,15 @@ public class DemoSteps {
         assertEquals(count + 1, demoPage.getCount());
     }
     
-    @When("^I pass number (-?\\d+)$")
+    @When("^I pass number (\\d+)$")
     public void convert_numbers_to_roman(int arg1) throws Throwable {
        demoPage.toRoman(arg1);
     }
 
-    @Then("^the roman result is (-?\\d+)$")
-    public void the_roman_result_is(int arg1) throws Throwable {
-        assertEquals(arg1, demoPage.getRomanResults());
+    @Then("^the roman numeral is (.+)$")
+    public void the_numeral_is(String result) throws Throwable {
+    	Thread.sleep(1000); // wait a bit
+        assertEquals(result, demoPage.getRomanResults());
     }
     
     

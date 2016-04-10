@@ -47,6 +47,12 @@ public class RomanNumberService {
 	 */
 	public String toRoman(int Int) {
 	    
+		
+		if(roman_numerals == null || roman_numerals.isEmpty()){
+			
+			loadRomanData();
+		}
+		
 	    String res = "";
 	    for(Map.Entry<String, Integer> entry : roman_numerals.entrySet()){
 	      int matches = Int/entry.getValue();
