@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -57,6 +58,12 @@ public class DemoSteps {
        demoPage.toRoman(arg1);
     }
 
+    @When("^I pass numbers (\\d+) and (\\d+)$")
+    public void convert_and_add_romans(int arg1, int agr2) throws Throwable {
+    	 throw new PendingException("Functionality note implemented yet");
+    }
+    
+    
     @Then("^the roman numeral is (.+)$")
     public void the_numeral_is(String result) throws Throwable {
     	Thread.sleep(1000); // wait a bit
